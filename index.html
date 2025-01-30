@@ -1,36 +1,83 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  <title>Sample Deployment</title>
-  <style>
-    body {
-      color: #ffffff;
-      background-color: #117a65;
-      font-family: Arial, sans-serif;
-      font-size: 14px;
-    }
-    
-    h1 {
-      font-size: 500%;
-      font-weight: normal;
-      margin-bottom: 0;
-    }
-    
-    h2 {
-      font-size: 200%;
-      font-weight: normal;
-      margin-bottom: 0;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Deployment with Background Image</title>
+    <style>
+     
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: 'Arial', sans-serif;
+            color: white;
+            text-align: center;
+            background: url('https://imgv3.fotor.com/images/share/Free-pink-gradient-aesthetic-background-from-Fotor.jpg') no-repeat center center/cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .overlay {
+            background: rgba(0, 0, 0, 0.6);
+            padding: 50px 50px;
+            border-radius: 15px;
+            box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
+            max-width: 600px;
+            text-align: center;
+             backdrop-filter: blur(5px); 
+        }
+
+        h1 {
+            font-size: 48px;
+            font-weight: bold;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        h2 {
+            font-size: 28px;
+            margin-bottom: 15px;
+            font-weight: 500;
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        /* Stylish button */
+        .btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 25px;
+            color: white;
+            background: linear-gradient(135deg, #117a65, #0e6655);
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 18px;
+            font-weight: bold;
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+            transition: 0.3s ease-in-out;
+        }
+
+        .btn:hover {
+            background: linear-gradient(135deg, #0e6655, #117a65);
+            transform: translateY(-3px);
+            box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.5);
+        }
+    </style>
 </head>
 <body>
-  <div align="center">
-    <h1>Congratulations!</h1>
-    <h2>F019772- You have successfully created a pipeline that retrieved this source application from an Amazon S3 bucket and deployed it 
-	to three Amazon EC2 instances using AWS CodeDeploy.</h2>
-    <p>For next steps, read the AWS CodePipeline Documentation.</p>
-  </div>
+    <div class="overlay">
+        <h1>Congratulations!</h1>
+        <h2>F019772 - Successful Deployment!</h2>
+        <p>You have successfully created a pipeline that retrieved this source application from AWS Elastic Beanstalk and deployed it 
+        to three Amazon EC2 instances using AWS CodeDeploy.</p>
+        <a href="https://docs.aws.amazon.com/codepipeline/latest/userguide/welcome.html" class="btn">Read AWS CodePipeline Documentation</a>
+    </div>
 </body>
 </html>
 
